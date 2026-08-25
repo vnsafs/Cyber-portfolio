@@ -6,25 +6,33 @@ export default function ProjectsInProgress() {
       title: "Web Recon & Subdomain Tool",
       description:
         "Automated tool for active reconnaissance, subdomain enumeration, and directory discovery.",
-      technologies: ["Python", "Requests", "OSINT"]
+      technologies: ["Python", "Requests", "OSINT"],
+      github: "https://github.com/vnsafs/Web-Recon-Subdomain-Tool",
+      demo: null
     },
     {
       title: "Active Directory Home Lab",
       description:
         "Simulated corporate environment for practicing internal reconnaissance and domain enumeration techniques.",
-      technologies: ["Windows Server", "PowerShell", "VirtualBox"]
+      technologies: ["Windows Server", "PowerShell", "VirtualBox"],
+      github: "#",
+      demo: "#"
     },
     {
       title: "Social Engineering Simulator",
       description:
         "Educational phishing simulation platform designed for credential harvesting awareness training.",
-      technologies: ["Python", "Flask", "HTML/CSS"]
+      technologies: ["Python", "Flask", "HTML/CSS"],
+      github: "#",
+      demo: "#"
     },
     {
       title: "Pentest & CTF Documentation",
       description:
         "Structured penetration testing reports and technical write-ups of security challenges.",
-      technologies: ["Markdown", "TryHackMe", "Reporting "]
+      technologies: ["Markdown", "TryHackMe", "Reporting "],
+      github: "#",
+      demo: "#"
     }
   ];
 
@@ -88,13 +96,25 @@ export default function ProjectsInProgress() {
                 </div>
 
                 <div className="flex gap-3">
-                  <button className="bg-gold text-void font-medium px-4 py-2 rounded-sm hover:bg-gold-bright hover:shadow-gold-glow transition-all duration-300">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gold text-void font-medium px-4 py-2 rounded-sm hover:bg-gold-bright hover:shadow-gold-glow transition-all duration-300 inline-block"
+                  >
                     GitHub
-                  </button>
+                  </a>
 
-                  <button className="border border-gold/40 text-bone-dim px-4 py-2 rounded-sm hover:text-bone hover:border-gold transition-all duration-300">
-                    Demo
-                  </button>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border border-gold/40 text-bone-dim px-4 py-2 rounded-sm hover:text-bone hover:border-gold transition-all duration-300 inline-block"
+                    >
+                      Demo
+                    </a>
+                  )}
                 </div>
 
               </div>
